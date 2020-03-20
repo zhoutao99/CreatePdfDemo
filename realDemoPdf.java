@@ -16,23 +16,23 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-    //ËùĞèjar°ü  itext-5.5.10.jar ,,ÖĞÎÄÊä³ö itext-asian.jar  Ïê¼û158ĞĞ
+//jaråŒ…ä¾èµ–itext-5.5.10.jarå’Œitext-asian.jar  
 public class realDemoPdf {
 
 
     public static void main(String[] args) throws  Exception{
-        //ÓÃÓÚÉú³ÉpdfµÄÂ·¾¶
+        //ç”¨äºç”Ÿæˆpdfçš„è·¯å¾„
         String newPath="E:\\pdfDemo.pdf";
-        //±íÍ·   Ïê¼û88ĞĞ
-        String[] str={"±¾Äê¶ÈÊÕÈë","Ğ¡ ¼Æ","ÀûÏ¢ÊÕÈë","ÆäËûÊÕÈë"};
-        String[] str2={"±¾Äê¶ÈÖ§³ö","Ğ¡ ¼Æ","Î¬ĞŞ·ÑÓÃ","ÆäËû·ÑÓÃ"};
+        //è¡¨å¤´   è¯¦è§88è¡Œ
+        String[] str={"æœ¬å¹´åº¦æ”¶å…¥","å° è®¡","åˆ©æ¯æ”¶å…¥","å…¶ä»–æ”¶å…¥"};
+        String[] str2={"æœ¬å¹´åº¦æ”¯å‡º","å° è®¡","ç»´ä¿®è´¹ç”¨","å…¶ä»–è´¹ç”¨"};
 
-        //ÄÚÈİ    Ïê¼û96ĞĞ
+        //å†…å®¹    è¯¦è§96è¡Œ
         List<String> rzList=new ArrayList<>();
         rzList.add(0,"aaa1");
         rzList.add(1,"bbb1");
         rzList.add(2,"ccc1");
-        //ÄÚÈİ    Ïê¼û96ĞĞ
+        //å†…å®¹    è¯¦è§96è¡Œ
         List<String> rzList2=new ArrayList<>();
         rzList2.add(0,"aaa2");
         rzList2.add(1,"bbb2");
@@ -53,17 +53,17 @@ public class realDemoPdf {
         PdfPTable table = null;
         PdfPCell cell;
 
-        table = new PdfPTable(4);//½¨Á¢±í¸ñ £¬4´ú±íÓĞ4ÁĞµÄ±í¸ñ
-        table.setTotalWidth(new float[]{70f,90f,90f,90f});//Ã¿ÁĞÉèÖÃ¿í¶È
+        table = new PdfPTable(4);//å»ºç«‹è¡¨æ ¼ ï¼Œ4ä»£è¡¨æœ‰4åˆ—çš„è¡¨æ ¼
+        table.setTotalWidth(new float[]{70f,90f,90f,90f});//æ¯åˆ—è®¾ç½®å®½åº¦
 
         table.setHorizontalAlignment(Element.ALIGN_CENTER);
         table.setLockedWidth(true);
         
-        cell = new PdfPCell(new Phrase("Î¨Ò»Á÷Ë®ºÅ0123456789",ChineseFont(4)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("å”¯ä¸€æµæ°´å·0123456789",ChineseFont(4)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(20f);
@@ -76,95 +76,95 @@ public class realDemoPdf {
 		cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
 		cell.setColspan(4);
 		cell.setFixedHeight(100f);
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
 		table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("ÉÏº£ÊĞÆÖ¶«ĞÂÇøxxÂ·xxÅªxxºÅxxxxxxÊÒ",ChineseFont(4)));
+        cell = new PdfPCell(new Phrase("ä¸Šæµ·å¸‚æµ¦ä¸œæ–°åŒºxxè·¯xxå¼„xxå·xxxxxxå®¤",ChineseFont(4)));
 //        cell.setPaddingTop(30f);
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         cell.setFixedHeight(20f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("·Ö»§²úÒµ´úÂë£º123456789012345678",ChineseFont(4)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("åˆ†æˆ·äº§ä¸šä»£ç ï¼š123456789012345678",ChineseFont(4)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         cell.setFixedHeight(20f);
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase("ÒøĞĞĞÅÏ¢ÕËºÅ£º123456789012345678",ChineseFont(4)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("é“¶è¡Œä¿¡æ¯è´¦å·ï¼š123456789012345678",ChineseFont(4)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         cell.setFixedHeight(20f);
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase("ÖÆ×÷µ¥Î»£ºÉÏº£ÒøĞĞ",ChineseFont(4)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("åˆ¶ä½œå•ä½ï¼šä¸Šæµ·é“¶è¡Œ",ChineseFont(4)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         cell.setFixedHeight(20f);
         table.addCell(cell);
         
         
-        cell = new PdfPCell(new Phrase("ÉÏº£ÊĞÉÌÆ·×¡Õ¬×¨ÏîÎ¬ĞŞ×Ê½ğÒµÖ÷Äê¶È½á´æµ¥",ChineseFont(1)));
+        cell = new PdfPCell(new Phrase("ä¸Šæµ·å¸‚å•†å“ä½å®…ä¸“é¡¹ç»´ä¿®èµ„é‡‘ä¸šä¸»å¹´åº¦ç»“å­˜å•",ChineseFont(1)));
         cell.setPaddingTop(10f);
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_CENTER);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("½á×ªÆÚ¼ä£º2018 Äê 01 ÔÂ 01 ÈÕÖÁ 2018 Äê 12 ÔÂ 31 ÈÕ",ChineseFont(4)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("ç»“è½¬æœŸé—´ï¼š2018 å¹´ 01 æœˆ 01 æ—¥è‡³ 2018 å¹´ 12 æœˆ 31 æ—¥",ChineseFont(4)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_CENTER);
         cell.setFixedHeight(20f);
         table.addCell(cell);
 
 
-        cell = new PdfPCell(new Phrase("Äê³õÓà¶î£º 1234567890123456.78 ",ChineseFont(2)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("å¹´åˆä½™é¢ï¼š 1234567890123456.78 ",ChineseFont(2)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(2);
         cell.setFixedHeight(30f);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("µ¥Î»£ºÈËÃñ±Ò£¨Ôª£©",ChineseFont(2)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("å•ä½ï¼šäººæ°‘å¸ï¼ˆå…ƒï¼‰",ChineseFont(2)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setPaddingBottom(5);
         cell.setColspan(2);
         cell.setFixedHeight(30f);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         table.addCell(cell);
-        // µÚÒ»ĞĞ±íÍ·
+        // ç¬¬ä¸€è¡Œè¡¨å¤´
         for (int j = 0; j < 4; j++) {
             cell = new PdfPCell(new Phrase(str[j],ChineseFont(2)));
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -176,7 +176,7 @@ public class realDemoPdf {
             }
             table.addCell(cell);
         }
-        //ÄÚÈİ£¬ÒµÎñÀàĞÍ£¬ÒµÎñÃ÷Ï¸£¬±¸×¢
+        //å†…å®¹ï¼Œä¸šåŠ¡ç±»å‹ï¼Œä¸šåŠ¡æ˜ç»†ï¼Œå¤‡æ³¨
         for(int k = 0; k < 3; k++){
             cell = new PdfPCell(new Phrase(rzlist.get(k),ChineseFont(2)));
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -205,42 +205,42 @@ public class realDemoPdf {
             table.addCell(cell);
         }
         
-        cell = new PdfPCell(new Phrase("ÄêÄ©Óà¶î£º 1234567890123456.78",ChineseFont(2)));
+        cell = new PdfPCell(new Phrase("å¹´æœ«ä½™é¢ï¼š 1234567890123456.78",ChineseFont(2)));
         cell.setPaddingTop(5);
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("¿ª»§ÒøĞĞÁªÏµµØÖ·£º12345678 Â· 1234 Åª 1234 ºÅ",ChineseFont(2)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("å¼€æˆ·é“¶è¡Œè”ç³»åœ°å€ï¼š12345678 è·¯ 1234 å¼„ 1234 å·",ChineseFont(2)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("×ÉÑ¯µç»°£º12345678901234",ChineseFont(2)));
-        cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("å’¨è¯¢ç”µè¯ï¼š12345678901234",ChineseFont(2)));
+        cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("           ×¢£ºÈçÀûÏ¢ÊÕÈëÆ«ÉÙ£¬¿ÉÄÜÊÇĞ¡Çø²¿·ÖÎ¬ĞŞ×Ê½ğÒÑ´æ¶¨ÆÚ£¬ÒòÎ´µ½ÆÚ£¬ÀûÏ¢ÉĞÎ´½á³ö¡£ÏêÇéÇë×ÉÑ¯Ğ¡ÇøÒµÖ÷Î¯Ô±»á»òÎïÒµ·şÎñÆóÒµ¡£",ChineseFont(3)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("           æ³¨ï¼šå¦‚åˆ©æ¯æ”¶å…¥åå°‘ï¼Œå¯èƒ½æ˜¯å°åŒºéƒ¨åˆ†ç»´ä¿®èµ„é‡‘å·²å­˜å®šæœŸï¼Œå› æœªåˆ°æœŸï¼Œåˆ©æ¯å°šæœªç»“å‡ºã€‚è¯¦æƒ…è¯·å’¨è¯¢å°åŒºä¸šä¸»å§”å‘˜ä¼šæˆ–ç‰©ä¸šæœåŠ¡ä¼ä¸šã€‚",ChineseFont(3)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
 //        cell.setPaddingTop(20f);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
@@ -248,126 +248,126 @@ public class realDemoPdf {
         table.addCell(cell);
         
         
-        Phrase p=new Phrase("           ÒµÖ÷¿ÉÒÔÍ¨¹ıÒÔÏÂ·½Ê½²éÑ¯±¾»§µÄÉÌÆ·×¡Õ¬Î¬ĞŞ×Ê½ğÊÕÖ§Ã÷Ï¸£º1¡¢ÏÂÔØÉÏº£ÎïÒµapp²¢µÇÂ½»òµÇÂ½https://962121.fgj.sh.gov.cn/£¬ÔÚ¡°ÉÌÆ·×¡Õ¬Î¬ĞŞ×Ê½ğ²éÑ¯¡±À¸ÖĞ×¢²áºó£¬½øĞĞ²éÑ¯£»2¡¢ÏòËùÔÚĞ¡ÇøÒµÖ÷Î¯Ô±»á»òÎïÒµ·şÎñÆóÒµ²éÑ¯£»3¡¢³Ö±¾½á´æµ¥¡¢²úÈ¨Ö¤ºÍÉí·İÖ¤¼şµ½ÒµÖ÷´ó»á¿ª»§ÒøĞĞ¹ñÌ¨°ìÀí²éÑ¯¡£",ChineseFont(3));
+        Phrase p=new Phrase("           ä¸šä¸»å¯ä»¥é€šè¿‡ä»¥ä¸‹æ–¹å¼æŸ¥è¯¢æœ¬æˆ·çš„å•†å“ä½å®…ç»´ä¿®èµ„é‡‘æ”¶æ”¯æ˜ç»†ï¼š1ã€ä¸‹è½½ä¸Šæµ·ç‰©ä¸šappå¹¶ç™»é™†æˆ–ç™»é™†https://962121.fgj.sh.gov.cn/ï¼Œåœ¨â€œå•†å“ä½å®…ç»´ä¿®èµ„é‡‘æŸ¥è¯¢â€æ ä¸­æ³¨å†Œåï¼Œè¿›è¡ŒæŸ¥è¯¢ï¼›2ã€å‘æ‰€åœ¨å°åŒºä¸šä¸»å§”å‘˜ä¼šæˆ–ç‰©ä¸šæœåŠ¡ä¼ä¸šæŸ¥è¯¢ï¼›3ã€æŒæœ¬ç»“å­˜å•ã€äº§æƒè¯å’Œèº«ä»½è¯ä»¶åˆ°ä¸šä¸»å¤§ä¼šå¼€æˆ·é“¶è¡ŒæŸœå°åŠç†æŸ¥è¯¢ã€‚",ChineseFont(3));
         cell = new PdfPCell(p);
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         table.addCell(cell);
 
-        cell = new PdfPCell(new Phrase("¸½£ºĞ¡ÇøÏà¹ØĞÅÏ¢",ChineseFont(2)));
+        cell = new PdfPCell(new Phrase("é™„ï¼šå°åŒºç›¸å…³ä¿¡æ¯",ChineseFont(2)));
         cell.setPaddingTop(20f);
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
 
-        cell = new PdfPCell(new Phrase("ÒµÖ÷´ó»áÃû³Æ£ºÉÏº£ÊĞXXXXÇø12345678901234567890ÒµÖ÷´ó»á",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("ä¸šä¸»å¤§ä¼šåç§°ï¼šä¸Šæµ·å¸‚XXXXåŒº12345678901234567890ä¸šä¸»å¤§ä¼š",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("ÒµÖ÷Î¯Ô±»áÖ÷ÈÎ£ºÕÅÈıÈı",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("ä¸šä¸»å§”å‘˜ä¼šä¸»ä»»ï¼šå¼ ä¸‰ä¸‰",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(2);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase("ÒµÖ÷Î¯Ô±»á¸±Ö÷ÈÎ£ºÀîËÄËÄ",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
-        cell.setColspan(2);
-        cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
-        cell.setFixedHeight(30f);
-        table.addCell(cell);
-        
-        cell = new PdfPCell(new Phrase("ÎïÒµ·şÎñÆóÒµÃû³Æ£ºÉÏº£ÊĞ12345678901234567890123456ÓĞÏŞ¹«Ë¾",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
-        cell.setColspan(4);
-        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
-        cell.setFixedHeight(30f);
-        table.addCell(cell);
-        cell = new PdfPCell(new Phrase("ÎïÒµ·şÎñÆóÒµÁªÏµµç»°£º12345678901234",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
-        cell.setColspan(4);
-        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
-        cell.setFixedHeight(30f);
-        table.addCell(cell);
-        cell = new PdfPCell(new Phrase("Ğ¡Çø¹ÜÀí´¦Ãû³Æ£ºÉÏº£ÊĞ1234567890Ğ¡Çø¹ÜÀí´¦",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
-        cell.setColspan(4);
-        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
-        cell.setFixedHeight(30f);
-        table.addCell(cell);
-        
-        cell = new PdfPCell(new Phrase("Ğ¡Çø¹ÜÀí´¦ÁªÏµµç»°£º12345678901234",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
-        cell.setColspan(2);
-        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
-        cell.setFixedHeight(30f);
-        table.addCell(cell);
-        cell = new PdfPCell(new Phrase("Ğ¡Çø¾­ÀíĞÕÃû£º³ÂÎåÎå",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("ä¸šä¸»å§”å‘˜ä¼šå‰¯ä¸»ä»»ï¼šæå››å››",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(2);
         cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
-        cell = new PdfPCell(new Phrase("Èô·¢ÏÖÉÏÊöĞÅÏ¢ÓëÊµ¼Ê²»·ûµÄ£¬¿ÉÏòÎïÒµÆóÒµ»òÒµÖ÷Î¯Ô±»á·´Ó³¡£",ChineseFont(2)));
-		cell.setBorderWidthRight(0);	//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthLeft(0);		//µ¥Ôª¸ñÓÒ²àborderÉèÎª0
-        cell.setBorderWidthBottom(0);	//µ¥Ôª¸ñµ×²¿borderÉèÎª0
-        cell.setBorderWidthTop(0);		//µ¥Ôª¸ñ¶¥²¿borderÉèÎª0
+        cell = new PdfPCell(new Phrase("ç‰©ä¸šæœåŠ¡ä¼ä¸šåç§°ï¼šä¸Šæµ·å¸‚12345678901234567890123456æœ‰é™å…¬å¸",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
+        cell.setColspan(4);
+        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+        cell.setFixedHeight(30f);
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase("ç‰©ä¸šæœåŠ¡ä¼ä¸šè”ç³»ç”µè¯ï¼š12345678901234",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
+        cell.setColspan(4);
+        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+        cell.setFixedHeight(30f);
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase("å°åŒºç®¡ç†å¤„åç§°ï¼šä¸Šæµ·å¸‚1234567890å°åŒºç®¡ç†å¤„",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
+        cell.setColspan(4);
+        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+        cell.setFixedHeight(30f);
+        table.addCell(cell);
+        
+        cell = new PdfPCell(new Phrase("å°åŒºç®¡ç†å¤„è”ç³»ç”µè¯ï¼š12345678901234",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
+        cell.setColspan(2);
+        cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+        cell.setFixedHeight(30f);
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase("å°åŒºç»ç†å§“åï¼šé™ˆäº”äº”",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
+        cell.setColspan(2);
+        cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
+        cell.setFixedHeight(30f);
+        table.addCell(cell);
+        
+        cell = new PdfPCell(new Phrase("è‹¥å‘ç°ä¸Šè¿°ä¿¡æ¯ä¸å®é™…ä¸ç¬¦çš„ï¼Œå¯å‘ç‰©ä¸šä¼ä¸šæˆ–ä¸šä¸»å§”å‘˜ä¼šåæ˜ ã€‚",ChineseFont(2)));
+		cell.setBorderWidthRight(0);	//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthLeft(0);		//å•å…ƒæ ¼å³ä¾§borderè®¾ä¸º0
+        cell.setBorderWidthBottom(0);	//å•å…ƒæ ¼åº•éƒ¨borderè®¾ä¸º0
+        cell.setBorderWidthTop(0);		//å•å…ƒæ ¼é¡¶éƒ¨borderè®¾ä¸º0
         cell.setColspan(4);
         cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         cell.setFixedHeight(30f);
         table.addCell(cell);
         
         document.add(table);
-        document.newPage();//ÊÖ¶¯»»ĞÂÒ³
+        document.newPage();//æ‰‹åŠ¨æ¢æ–°é¡µ
         document.close();
 
     }
 
     /**
-     * ÖĞÎÄ×ÖÌåÖ§³Ö
+     * ä¸­æ–‡å­—ä½“æ”¯æŒ
      */
     public static Font ChineseFont(int fontType) {
         BaseFont baseFont=null;
-        try {                                                       //ÖĞÎÄÊä³ö£¬ĞèÒªitext-asian.jar Ö§³Ö
+        try {                                                      
             baseFont=BaseFont.createFont("STSong-Light","UniGB-UCS2-H", true);
         } catch (DocumentException e) {
             e.printStackTrace();
@@ -379,7 +379,7 @@ public class realDemoPdf {
             chineseFont.setSize(15f);
         }else if(fontType==2){
             chineseFont.setSize(11f);
-//            chineseFont.setStyle("font-weight:bold;");//¸ø×ÖÌå¼ÓÑùÊ½---¼Ó´Ö
+//            chineseFont.setStyle("font-weight:bold;");//ç»™å­—ä½“åŠ æ ·å¼---åŠ ç²—
 
         } else if(fontType==121){
             chineseFont.setSize(10f);
@@ -387,7 +387,6 @@ public class realDemoPdf {
         	chineseFont.setSize(9f);
         }else if(fontType==4){
         	 chineseFont.setSize(10f);
-//             chineseFont.setStyle("font-weight:bold;");
         }
         return chineseFont;
     }
