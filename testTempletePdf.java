@@ -10,39 +10,37 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-
+//è¯¥æ–¹å¼éœ€è¦å…ˆç”¨Adobe Acrobat DCç”Ÿæˆè¡¨å•ï¼Œç„¶ååœ¨è¡¨å•ä¸­å†™å­—æ®µåï¼Œå¯ç™¾åº¦
 public class testTempletePdf {
 
 	public static void main(String[] args) {
 		try {
-			/* ´ò¿ªÒÑ¾­¶¨ÒåºÃ×Ö¶ÎÒÔºóµÄpdfÄ£°å */
-			PdfReader reader = new PdfReader("E:\\ÉÏº£ÒøĞĞÄ£°å.pdf");
+			/* æ‰“å¼€å·²ç»å®šä¹‰å¥½å­—æ®µä»¥åçš„pdfæ¨¡æ¿ */
+			PdfReader reader = new PdfReader("E:\\ä¸Šæµ·é“¶è¡Œæ¨¡æ¿.pdf");
 
-			/* ½«ÒªÉú³ÉµÄÄ¿±êPDFÎÄ¼şÃû³Æ */
+			/* å°†è¦ç”Ÿæˆçš„ç›®æ ‡PDFæ–‡ä»¶åç§° */
 			PdfStamper stamp = new PdfStamper(reader, new FileOutputStream(
-					"E:\\iText±¨±í½á¹û.pdf"));
+					"E:\\iTextæŠ¥è¡¨ç»“æœ.pdf"));
 
 			PdfContentByte under = stamp.getUnderContent(1);
 
-			/* Ê¹ÓÃÖĞÎÄ×ÖÌå */
+			/* ä½¿ç”¨ä¸­æ–‡å­—ä½“ */
 			 BaseFont bf = BaseFont.createFont("STSong-Light", "UniGB-UCS2-H",
 			 BaseFont.NOT_EMBEDDED);
-//			BaseFont bf = BaseFont.createFont("/MSYHBD.TTF",
-//					BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 			Font FontChinese = new Font(bf, 12, Font.NORMAL);
 
-			/* È¡³ö±¨±íÄ£°åÖĞµÄËùÓĞ×Ö¶Î */
+			/* å–å‡ºæŠ¥è¡¨æ¨¡æ¿ä¸­çš„æ‰€æœ‰å­—æ®µ */
 			AcroFields form = stamp.getAcroFields();
 			form.addSubstitutionFont(bf);
 
-			/* Îª×Ö¶Î¸³Öµ,×¢Òâ×Ö¶ÎÃû³ÆÊÇÇø·Ö´óĞ¡Ğ´µÄ */
+			/* ä¸ºå­—æ®µèµ‹å€¼,æ³¨æ„å­—æ®µåç§°æ˜¯åŒºåˆ†å¤§å°å†™çš„ */
 			form.setField("xiaoji1", "111111");
 			form.setField("xiaoji2", "222222");
 			form.setField("lxsr", "123");
 			form.setField("qtsr", "456");
 			form.setField("wxfy", "123");
 			form.setField("qtfy", "456");
-			// ¿ÉÒÔĞŞ¸ÄÖµ
+			// å¯ä»¥ä¿®æ”¹å€¼
 			// Set<String> keys = form.getFields().keySet();
 			// for (String name : keys) {
 			// if (name == null || name.length() <= 0){
@@ -55,9 +53,9 @@ public class testTempletePdf {
 			// BaseFont.createFont() */, null);
 			// form.setField(name, value);// reset value
 			// }
-
+			/* å¿…é¡»è¦è°ƒç”¨è¿™ä¸ªï¼Œå¦åˆ™æ–‡æ¡£ä¸ä¼šç”Ÿæˆçš„ */
 			stamp.setFormFlattening(true);
-			/* ±ØĞëÒªµ÷ÓÃÕâ¸ö£¬·ñÔòÎÄµµ²»»áÉú³ÉµÄ */
+			
 			stamp.close();
 			reader.close();
 		} catch (DocumentException de) {
